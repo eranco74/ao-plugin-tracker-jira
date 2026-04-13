@@ -1,0 +1,54 @@
+{
+  "name": "ao-plugin-tracker-jira",
+  "version": "0.1.0",
+  "description": "Jira issue tracker plugin for Agent Orchestrator",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eranco74/ao-plugin-tracker-jira.git"
+  },
+  "homepage": "https://github.com/eranco74/ao-plugin-tracker-jira#readme",
+  "bugs": {
+    "url": "https://github.com/eranco74/ao-plugin-tracker-jira/issues"
+  },
+  "author": "Eran Ifrach <eifrach@redhat.com>",
+  "keywords": [
+    "agent-orchestrator",
+    "ao-plugin",
+    "tracker",
+    "jira",
+    "jira-cli",
+    "ai",
+    "automation"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@aoagents/ao-core": "^0.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  }
+}
